@@ -2,6 +2,8 @@
 
 En este taller se desarrollan diferentes formas de procesamiento de imagenes, tanto por software (Processing) como por hardware (OpenGL Shading Language). En la parte de software (archivo.pde) se desarrollaran en varias fases, como lo son diferentes métodos de convertir imagenes a varias escalas de grises como tambien aplicando varias matrices de convolución las cuales dan dieferentes efectos a las imágenes como por ejemplo enfoque, realce, entre otros. Tambien se implementaran estos mismos métodos pero ahora con un pequeño video en el cual se tomara cada fotograma y realizaran las diferentes converciones y se podra observar los resultados. Ahora en la parte de hadware se haran las mismas pruebas tanto con imágenes como con videos pero en este caso se implementaran SHADERS (archivo.glsl), para hacer la comparación en rendimiento entre los recursos usados tanto por la CPU como por la GPU.
 
+<br>
+<br>
 
 ## Objetivos  
 
@@ -13,6 +15,8 @@ En este taller se desarrollan diferentes formas de procesamiento de imagenes, ta
 
 * Realizar la comparación entre el rendimiento entre la CPU y la GPU al ejecutar los ejercicios solo con **Processing** como con **OpenGL Shading Language**.
 
+<br>
+<br>
 
 ## Comenzando 🚀
 
@@ -44,6 +48,7 @@ Antes de ejecutar los ejercicios debemos tener tener las siguientes herramientas
 
    Ahora buscamos en nuestro lanzador de aplicaciones o menu desplegable la aplicacion **Processing** y la abrimos. listo ya tenemos instalado **Processing** en GNU/Linux.
 
+<br>
     
 ### Instalación de libreia [video] 🔧
 
@@ -51,26 +56,98 @@ Para la instalación de la libreria **video** seguimos las siguientes instruccio
 
 ***[Problemas instalación en GNU/Linux]***  
 Distribuciones recientes GNU/Linux que emplean  **[gstreamer >= 1]**, requieren [**ESTA!!!**](https://github.com/gohai/processing-video/releases/tag/v1.0.2) versión alternativa de la libreria de video. Descomprimir el archivo ***(.zip)*** en la carpeta de **libraries** del sketbook **(e.g., $HOME/sketchbook/libraries)**.  
+
+<br>
+<br>
   
 ## Ejecutando los ejercicios ⚙️
 
-_Explica como ejecutar las pruebas automatizadas para este sistema_
-
-### Analice las pruebas end-to-end 🔩
-
-_Explica que verifican estas pruebas y por qué_
+### Promedio RGB
+Mediante el promedio RGB tomamos la las componentes RED, GREEN y BLUE se suman y se dividen entre 3 y este nuevo valor es que que reemplaza en las componeentes y al todos tener el mismo valor se obtine una escala de gris.  
 
 ```
-Da un ejemplo
-```
+    color_gris = ((RED + GREEN + BLUE) / 3)  
 
-### Y las pruebas de estilo de codificación ⌨️
+    pixel = color(color_gris, color_gris, color_gris)
+```
+![Imagen_promedio_rgb](/imagenes/promedio_rgb.png)  
 
-_Explica que verifican estas pruebas y por qué_
+<br>
+
+### LUMA
+Este metodo de conversion a escala de grises nos permite conservar la luminosidad de la imagen, es decir conservar mas la fidelidad de la imagen original, en este caso teniendo en cuenta la proporcionalidad de las 3 componentes de RGB.
 
 ```
-Da un ejemplo
+    color_gris = ((0.21 * RED) + (0.72 * GREEN) + (0.07 * BLUE))  
+
+    pixel = color(color_gris, color_gris, color_gris)
 ```
+![Imagen_LUMA](/imagenes/luma.png)  
+
+<br>
+
+### Histograma
+Por medio del histograma se puede observar la cantidad de los diferentes rangos de la escala de grises que contiene una imagen. Cuando se desplaza el cursor dentro del histograma moviendolo horizontalmente se ve graficamente en la imagen de escala de grises en color verde donde se ven concentrados. 
+
+![Imagen_histograma](/imagenes/histograma.png)
+
+<br>
+
+### Matrices de Convolución
+A continuación vemos diferentes ejemplos de aplicar filtros a una imagen mediante las matrices de convolución:  
+
+* **Enfoque**  
+```
+float[][] focus  = {{  0, -1,  0},
+                    { -1,  5, -1},
+                    {  0, -1,  0}};
+```
+![Imagen_enfoque](/imagenes/enfoque.png)  
+
+<br>
+
+* **Realce**  
+```
+float[][] embossment = {{ -2, -1,  0},
+                        { -1,  1,  1},
+                        {  0,  1,  2}};
+```
+![Imagen_realce](/imagenes/realce.png)  
+
+<br>
+
+* **Pulir**  
+```
+float[][] sharpen = {{ -2, -1,  0},
+                     { -1,  1,  1},
+                     {  0,  1,  2}};
+```
+![Imagen_pulir](/imagenes/pulir.png)  
+
+<br>
+
+* **Realce de bordes**  
+```
+float[][] edge_enhancement = {{  1,  1,  1},
+                              {  1, -2,  1},
+                              { -1, -1, -1}};
+```
+![Imagen_realce borde](/imagenes/realce_borde.png)  
+
+<br>
+
+* **Detectar bordes**  
+```
+float[][] edge_detection = {{ -1, -1, -1},
+                            { -1,  8, -1},
+                            { -1, -1, -1}};
+```
+![Imagen_detectar_borde](/imagenes/detectar_borde.png)
+
+<br>
+<br>
+
+## Conclusiones
 
 ## Referencias 📖  
 
