@@ -82,9 +82,6 @@ Da un ejemplo
 * [Introducción a la Programación de Shaders](https://www.youtube.com/watch?v=vaiyuVlZuCk)
 * [Overview of GLSL](https://www.youtube.com/watch?v=uOErsQljpHs)
 
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
-
-
 
 ## Autores ✒️
 
@@ -94,9 +91,6 @@ Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](ht
 | Jhon Mueses           | [jjmuesesq](https://github.com/jjmuecesq)     |
 | Gonzalo Báez          | [gebaezs](https://github.com/gebaezs)         |
 
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
-
 ## Licencia 📄
 
 Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE.md](https://github.com/VisualUnal2020/procesamiento_imagenes/blob/master/LICENSE) para mas detalles.
-
