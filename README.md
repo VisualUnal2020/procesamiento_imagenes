@@ -7,7 +7,7 @@ En este taller se desarrollan diferentes formas de procesamiento de imagenes, ta
 
 ## Objetivos  
 
-* Observar la diferencia entre las converciones a escalas de grises por el método **promedio RGB** y el método **LUMA**, mas especificamente cual es mas fiel con la conservación de la luminosidad y detalles con respecto a la imagen o video original.  
+* Observar la diferencia entre las converciones a escalas de grises por el método **promedio RGB** y el método **LUMA**, y ver cual es más fiel con la conservación de la luminosidad y detalles con respecto a la imagen o video original.  
 
 * Obervar los efectos obtenidos al aplicar los filtros (matrices de convolución) tanto a las imagenes como al video y como estos pueden ser comparados con algunos efectos que emplean algunos programas de edición y/o cámaras con diferentes lentes.  
 
@@ -20,7 +20,7 @@ En este taller se desarrollan diferentes formas de procesamiento de imagenes, ta
 
 ## Comenzando 🚀
 
-Antes de ejecutar los ejercicios debemos tener tener las siguientes herramientas y algunas librerias instaladas (_dependiendo del sistema operativo_), las cuales mencionaremos a continuación al igual que su instalacion.
+Antes de ejecutar los ejercicios debemos tener tener las siguientes herramientas y algunas librerias instaladas (_dependiendo del sistema operativo_), las cuales mencionaremos a continuación al igual que su instalación.
 
 
 ### Pre-requisitos 📋
@@ -28,7 +28,7 @@ Antes de ejecutar los ejercicios debemos tener tener las siguientes herramientas
 * **Processing**:  
     Es un lenguaje de programación y entorno de desarrollo integrado de código abierto basado en Java, de fácil utilización, y que sirve como medio para la enseñanza y producción de proyectos multimedia e interactivos de diseño digital.  
     
-    Se puede descargar de su pagina oficial en el siguiente link:  
+    Se puede descargar de su página oficial en el siguiente link:  
     [**DESCARGAR PROCESSING**](https://processing.org/download/)  
     
     Debemos elegir el archivo a descargar según las especificaciones de la arquitecura del procesador (32-bit ó 64-bit) y el sistema operativo instalado (Windows ,GNU/Linux).  
@@ -50,12 +50,12 @@ Antes de ejecutar los ejercicios debemos tener tener las siguientes herramientas
 
 <br>
     
-### Instalación de libreria [video] 🔧
+### Instalación de librería [video] 🔧
 
-Para la instalación de la libreria **video** seguimos las siguientes instrucciones (tanto para Windows como para GNU/Linux): abrimos la aplicación *[Processing**, vamos a la barra de menu y damos clic en la opción **Tools** la cual nos abre un menu desplegable y damos clic en la opcion **Add Tool...**, la cual nos abre una nueva ventana con cuatro pestañas y vamos a la pestaña de **Libraries**, en el campo de busqueda (filtro) escribimos **video**, en los resultados buscamos la opción que dice **Video | GStreamer-based video library for Processing.**, la seleccionamos y en la parte inferior derecha damos clic en el boton **install**, esperamos un momento mientras instala la libreria, luego reiniciamos la aplicacion (cerramos y volvemos a abrir la aplicación).
+Para la instalación de la librería **video** seguimos las siguientes instrucciones (tanto para Windows como para GNU/Linux): abrimos la aplicación **Processing**, vamos a la barra de menu y damos clic en la opción **Tools** la cual nos abre un menu desplegable y damos clic en la opcion **Add Tool...**, la cual nos abre una nueva ventana con cuatro pestañas y vamos a la pestaña de **Libraries**, en el campo de busqueda (filtro) escribimos **video**, en los resultados buscamos la opción que dice **Video | GStreamer-based video library for Processing.**, la seleccionamos y en la parte inferior derecha damos clic en el botón **install**, esperamos un momento mientras instala la librería, luego reiniciamos la aplicación (cerramos y volvemos a abrir la aplicación).
 
 ***[Problemas instalación en GNU/Linux]***  
-Distribuciones recientes GNU/Linux que emplean  **[gstreamer >= 1]**, requieren [**ESTA!!!**](https://github.com/gohai/processing-video/releases/tag/v1.0.2) versión alternativa de la libreria de video. Descomprimir el archivo ***(.zip)*** en la carpeta de **libraries** del sketbook **(e.g., $HOME/sketchbook/libraries)**.  
+Distribuciones recientes GNU/Linux que emplean  **[gstreamer >= 1]**, requieren [**ESTA!!!**](https://github.com/gohai/processing-video/releases/tag/v1.0.2) versión alternativa de la librería de video. Descomprimir el archivo ***(.zip)*** en la carpeta de **libraries** del sketbook **(e.g., $HOME/sketchbook/libraries)**.  
 
 <br>
 <br>
@@ -87,7 +87,7 @@ Este metodo de conversion a escala de grises nos permite conservar la luminosida
 <br>
 
 ### Histograma
-Por medio del histograma se puede observar la cantidad de los diferentes rangos de la escala de grises que contiene una imagen. Cuando se desplaza el cursor dentro del histograma moviendolo horizontalmente se ve graficamente en la imagen de escala de grises en color verde donde se ven concentrados. 
+Por medio del histograma se puede observar la cantidad de los diferentes rangos de la escala de grises que contiene una imagen. Cuando se desplaza el cursor dentro del histograma moviendolo horizontalmente se ve gráficamente en la imagen de escala de grises en color verde donde se ven concentrados. 
 
 ![Imagen_histograma](/imagenes/histograma.png)
 
@@ -193,7 +193,7 @@ Rendimiento del procesador mientras se ejecuta el video:
 <br>  
 
 
-Ejecutando el video con matrices de convolucion:
+Ejecutando el video con matrices de convolución:
 ![video_convoluciones](/imagenes/video_convoluciones.png)  
 
 <br>  
@@ -208,7 +208,7 @@ Ejecutando el video con **SHADERS** y conversión escala de grises:
 
 <br>
 
-Rendimiento del procesador mientras se ejecuta el video con **SHADERS** y conversión a escala de grises:  
+Rendimiento del procesador mientras se ejecuta el video:  
 ![procesador_video_convoluciones](/imagenes/procesador_corriendo_convolucionessss.png)  
 
 <br>
@@ -218,7 +218,7 @@ Ejecutando el video con **SHADERS** y matrices de convolución:
 
 <br>
 
-Rendimiento del procesador mientras se ejecuta el video con **SHADERS** y matrices de convolución:  
+Rendimiento del procesador mientras se ejecuta el video:   
 ![procesador_video_convoluciones](/imagenes/procesador_corriendo_convolucionessss.png)  
 
 
