@@ -1,13 +1,13 @@
 # Procesamiento De Imagenes
 
-En este taller se desarrollan diferentes formas de procesamiento de imagenes, tanto por software (Processing) como por hardware (OpenGL Shading Language). En la parte de software (archivo.pde) se desarrollaran en varias fases, como lo son diferentes métodos de convertir imagenes a varias escalas de grises como tambien aplicando varias matrices de convolución las cuales dan dieferentes efectos a las imágenes como por ejemplo enfoque, realce, entre otros. Tambien se implementaran estos mismos métodos pero ahora con un pequeño video en el cual se tomara cada fotograma y realizaran las diferentes converciones y se podra observar los resultados. Ahora en la parte de hadware se haran las mismas pruebas tanto con imágenes como con videos pero en este caso se implementaran SHADERS (archivo.glsl), para hacer la comparación en rendimiento entre los recursos usados tanto por la CPU como por la GPU.
+En este taller se desarrollan diferentes formas de procesamiento de imagenes, tanto por software (Processing) como por hardware (OpenGL Shading Language). En la parte de software (archivo.pde) se desarrollaran en varias fases, como lo son diferentes métodos de convertir imagenes a varias escalas de grises como tambieén aplicando varias matrices de convolución las cuales dan dieferentes efectos a las imágenes como por ejemplo enfoque, realce, entre otros. También se implementarán estos mismos métodos pero ahora con un pequeño video en el cual se tomara cada fotograma y realizaran las diferentes conversiones y se podrá observar los resultados. Ahora en la parte de hardware se haran las mismas pruebas tanto con imágenes como con videos pero en este caso se implementarán SHADERS (archivo.glsl), para hacer la comparación en rendimiento entre los recursos usados tanto por la CPU como por la GPU.
 
 <br>
 <br>
 
 ## Objetivos  
 
-* Observar la diferencia entre las converciones a escalas de grises por el método **promedio RGB** y el método **LUMA**, para determinar cual es más fiel con la conservación de la luminosidad y detalles con respecto a la imagen o video original.  
+* Observar la diferencia entre las conversiones a escalas de grises por el método **promedio RGB** y el método **LUMA**, para determinar cual es más fiel con la conservación de la luminosidad y detalles con respecto a la imagen o video original.  
 
 * Obervar los efectos obtenidos al aplicar los filtros (matrices de convolución) tanto a las imagenes como al video y como estos pueden ser comparados con algunos efectos que emplean programas de edición y/o cámaras con diferentes lentes.  
 
@@ -238,7 +238,7 @@ Rendimiento del procesador mientras se ejecuta el video:
 
 * Se puede ver la diferencia al convertir una imagen a escala de grises cuando se usa promedio RGB y LUMA ya que en LUMA se parecia mejor la conservación del brillo, en otras palabras se puede ser la diferencia entre los colores de la imagen original ya que en el promedio RGB lo que es color rojo y verde parece que fueran el mismo y no ve muy claramente la diferencia en ese caso.  
 
- * Algunos de los filtros(efectos) al aplicar las convoluciones como *enfoque* y *pulir* se asemejan a los efectos de camaras profesionales usando lentes con el llamado efecto retrato o bokeh, o en su momento a Google con su smartphone PIXEL que aplicaba efectos y mejoras a  las fotos tomadas mediande el uso de software.  
+ * Algunos de los filtros(efectos) al aplicar las convoluciones como **enfoque** y **pulir** se asemejan a los efectos de camaras profesionales usando lentes con el llamado efecto retrato o bokeh, o en su momento a Google con su smartphone PIXEL que aplicaba efectos y mejoras a  las fotos tomadas mediande el uso de software.  
 
  * Se puede concluir que el uso de *SHADERS* permite un mejor rendimiento de la aplicacion ya que libera al CPU cálculos que son difíciles de hacer, por ejemplo en el CPU_11 se ve que su rendimiento se encuentra aproximadamente entre el 70% y el 100% de uso cuando se esta renderizando el video convertido a escala de grises y convoluciones y un uso de la tarjeta gráfica integrada del 13%, pero cuando se ejecuta con SHADRES se observa el uso de la tarjeta gráfica dedicada (Nvidia) se encuenrta entre el 17% y 20% la intergada baja su rendimiento al 7% y en la CPU sus procesadores el que más consume llega al 30%, por lo cual este cambio de rendimiento demuestra que la implementacion de SHADERS mejora el rendimiento de la CPU al lierarlo de cálculos lentos y que en la tarjeta grafica se realizan de manera mas eficiente con hardware dedicado y en paralelo.
 
