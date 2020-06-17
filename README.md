@@ -235,8 +235,8 @@ Rendimiento del procesador mientras se ejecuta el video:
 
 
 ## Conclusiones
- * Aunque el consumo de recursos al usar shaders es levemente mayor, realmente no hay una diferencia de rendimiento significativa entre usar o no shaders personalizados.
- * conclusion 2
+ * El uso de matrices de convoluvión en video se realiza más eficientemente con shaders perzonalizados, ya que en el ejecicio que se realiza sin ellos casi toda la carga cae sobre un procesador.
+ * Cuando se trata de procesar imagenes de forma individual, ya sea con matrices de convolución o trasformación a blanco y negro, casi no hay diferencia de rendimiento entre usar shaders personalizados o no.
  * conclusion 3
 
 ## Referencias 📖  
