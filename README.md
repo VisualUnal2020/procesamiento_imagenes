@@ -50,7 +50,7 @@ Antes de ejecutar los ejercicios debemos tener tener las siguientes herramientas
 
 <br>
     
-### Instalación de libreia [video] 🔧
+### Instalación de libreria [video] 🔧
 
 Para la instalación de la libreria **video** seguimos las siguientes instrucciones (tanto para Windows como para GNU/Linux): abrimos la aplicación *[Processing**, vamos a la barra de menu y damos clic en la opción **Tools** la cual nos abre un menu desplegable y damos clic en la opcion **Add Tool...**, la cual nos abre una nueva ventana con cuatro pestañas y vamos a la pestaña de **Libraries**, en el campo de busqueda (filtro) escribimos **video**, en los resultados buscamos la opción que dice **Video | GStreamer-based video library for Processing.**, la seleccionamos y en la parte inferior derecha damos clic en el boton **install**, esperamos un momento mientras instala la libreria, luego reiniciamos la aplicacion (cerramos y volvemos a abrir la aplicación).
 
@@ -147,7 +147,85 @@ float[][] edge_detection = {{ -1, -1, -1},
 <br>
 <br>
 
+### Rendimiento  
+
+Para realizar el análisis de el uso de la CPU y la GPU, se uso una computadora con las siguientes especificaciones:  
+
+* Procesador: Intel Core i7-8790H
+* Mem. RAM: 8GB
+* Tarj. Gráfica: Nvidia 1050 Ti  
+* Tarj. Integrada: IntelGraphics 4000
+
+El video usado:
+
+* Tamaño: 640x360 px 
+* FPS: 60  
+
+<br>
+<br>  
+
+Orden de los proesadores:  
+```
+    ||==========||==========||==========||==========||
+    ||  CPU_00  ||  CPU_01  ||  CPU_02  ||  CPU_03  ||
+    ||==========||==========||==========||==========||
+    ||  CPU_04  ||  CPU_05  ||  CPU_06  ||  CPU_07  ||
+    ||==========||==========||==========||==========||
+    ||  CPU_08  ||  CPU_09  ||  CPU_10  ||  CPU_11  ||
+    ||==========||==========||==========||==========||
+```
+<br>  
+
+Condiciones iniciales del sistema antes de correr el video con las diferentes conversiones y convoluciones:  
+
+![codiciones_iniciales](/imagenes/procesador_inicio.png)
+
+<br>  
+
+Ejecutando el video con la conversión a escala de grises (LUMA):  
+![video_escala_grises](/imagenes/video_grises.png)  
+
+<br>  
+
+Rendimiento del procesador mientras se ejecuta el video:  
+![procesador_video_grises](/imagenes/procesador_corriendo_video_grises.png)
+
+<br>  
+
+
+Ejecutando el video con matrices de convolucion:
+![video_convoluciones](/imagenes/video_convoluciones.png)  
+
+<br>  
+
+Rendimiento del procesador mientras se ejecuta el video:  
+![procesador_video_convoluciones](/imagenes/procesador_corriendo_convoluciones.png)  
+
+<br>
+
+Ejecutando el video con **SHADERS** y conversión escala de grises:  
+![video_convoluciones](/imagenes/convolucionesss.png)  
+
+<br>
+
+Rendimiento del procesador mientras se ejecuta el video con **SHADERS** y conversión a escala de grises:  
+![procesador_video_convoluciones](/imagenes/procesador_corriendo_convolucionessss.png)  
+
+<br>
+
+Ejecutando el video con **SHADERS** y matrices de convolución:  
+![video_convoluciones](/imagenes/convolucionesss.png)  
+
+<br>
+
+Rendimiento del procesador mientras se ejecuta el video con **SHADERS** y matrices de convolución:  
+![procesador_video_convoluciones](/imagenes/procesador_corriendo_convolucionessss.png)  
+
+
 ## Conclusiones
+ * conclusion 1
+ * conclusion 2
+ * conclusion 3
 
 ## Referencias 📖  
 
