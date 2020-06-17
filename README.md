@@ -7,9 +7,9 @@ En este taller se desarrollan diferentes formas de procesamiento de imagenes, ta
 
 ## Objetivos  
 
-* Observar la diferencia entre las converciones a escalas de grises por el método **promedio RGB** y el método **LUMA**, y ver cual es más fiel con la conservación de la luminosidad y detalles con respecto a la imagen o video original.  
+* Observar la diferencia entre las converciones a escalas de grises por el método **promedio RGB** y el método **LUMA**, para determinar cual es más fiel con la conservación de la luminosidad y detalles con respecto a la imagen o video original.  
 
-* Obervar los efectos obtenidos al aplicar los filtros (matrices de convolución) tanto a las imagenes como al video y como estos pueden ser comparados con algunos efectos que emplean algunos programas de edición y/o cámaras con diferentes lentes.  
+* Obervar los efectos obtenidos al aplicar los filtros (matrices de convolución) tanto a las imagenes como al video y como estos pueden ser comparados con algunos efectos que emplean programas de edición y/o cámaras con diferentes lentes.  
 
 * Por medio de un histrograma observar la cantidad (porcentaje) de los diferentes valores de grises luego de realizar la conversión de una imagen a escala de grises mediante el método **LUMA** y como estos se ven reflejados en la imagen convertida.  
 
@@ -38,21 +38,20 @@ Antes de ejecutar los ejercicios debemos tener tener las siguientes herramientas
   
 
     **[GNU/Linux]**  
-    Luego de descargar el archivo (.tgz), vamos a la carpeta donde se encuentra la descarga, hacemos clic derecho sobre el archivo y le damos extraer lo cual nos genera una carpeta llamada ***processing-3.5.4***, ingresamos a esta carpeta y dentro de la carpeta hacemos clic derecho y 
-    damos clic sobre la opcion ***Abrir Terminal***. lo cual nos abre una terminal la cual ya en la ruta de la carpeta en la estamos en el modo grafico, ahora ejecutamos el siguiente comando:  
+    Luego de descargar el archivo (.tgz), vamos a la carpeta donde se encuentra la descarga, hacemos clic derecho sobre el archivo y le damos extraer lo cual nos genera una carpeta llamada ***processing-3.5.4***, ingresamos a esta carpeta y dentro de la misma hacemos clic derecho y elegimos la opcion ***Abrir Terminal***, luego se nos abre la terminal la cual ya en la ruta de la carpeta en la que estamos en el modo grafico ejecutamos el siguiente comando:  
 
 
 ```  
     sudo sh install.sh 
 ````  
 
-   Ahora buscamos en nuestro lanzador de aplicaciones o menu desplegable la aplicacion **Processing** y la abrimos. listo ya tenemos instalado **Processing** en GNU/Linux.
+   Ahora buscamos en nuestro lanzador de aplicaciones o menu desplegable la aplicacion **Processing** y la abrimos. Ahora ya tenemos instalado **Processing** en GNU/Linux.
 
 <br>
     
 ### Instalación de librería [video] 🔧
 
-Para la instalación de la librería **video** seguimos las siguientes instrucciones (tanto para Windows como para GNU/Linux): abrimos la aplicación **Processing**, vamos a la barra de menu y damos clic en la opción **Tools** la cual nos abre un menu desplegable y damos clic en la opcion **Add Tool...**, la cual nos abre una nueva ventana con cuatro pestañas y vamos a la pestaña de **Libraries**, en el campo de busqueda (filtro) escribimos **video**, en los resultados buscamos la opción que dice **Video | GStreamer-based video library for Processing.**, la seleccionamos y en la parte inferior derecha damos clic en el botón **install**, esperamos un momento mientras instala la librería, luego reiniciamos la aplicación (cerramos y volvemos a abrir la aplicación).
+Para la instalación de la librería **video** seguimos las siguientes instrucciones (tanto para Windows como para GNU/Linux): abrimos la aplicación **Processing**, vamos a la barra de menu y damos clic en la opción **Tools** la cual nos abre un menu desplegable y damos clic en la opcion **Add Tool...**, posteriormente nos abre una nueva ventana con cuatro pestañas y vamos a la pestaña de **Libraries**, en el campo de busqueda (filtro) escribimos **video**, en los resultados buscamos la opción que dice **Video | GStreamer-based video library for Processing.**, la seleccionamos y en la parte inferior derecha damos clic en el botón **install**, esperamos un momento mientras instala la librería, luego reiniciamos la aplicación (cerramos y volvemos a abrir la aplicación).
 
 ***[Problemas instalación en GNU/Linux]***  
 Distribuciones recientes GNU/Linux que emplean  **[gstreamer >= 1]**, requieren [**ESTA!!!**](https://github.com/gohai/processing-video/releases/tag/v1.0.2) versión alternativa de la librería de video. Descomprimir el archivo ***(.zip)*** en la carpeta de **libraries** del sketbook **(e.g., $HOME/sketchbook/libraries)**.  
@@ -63,7 +62,7 @@ Distribuciones recientes GNU/Linux que emplean  **[gstreamer >= 1]**, requieren 
 ## Ejecutando los ejercicios ⚙️
 
 ### Promedio RGB
-Mediante el promedio RGB tomamos la las componentes RED, GREEN y BLUE se suman y se dividen entre 3 y este nuevo valor es que que reemplaza en las componeentes y al todos tener el mismo valor se obtine una escala de gris.  
+Mediante el promedio RGB tomamos las componentes RED, GREEN y BLUE, se suman y se dividen entre 3 y este nuevo valor es el que reemplaza a todas las componentes con el mismo valor obteniendo asi una escala de gris.  
 
 ```
     color_gris = ((RED + GREEN + BLUE) / 3)  
@@ -87,7 +86,7 @@ Este metodo de conversion a escala de grises nos permite conservar la luminosida
 <br>
 
 ### Histograma
-Por medio del histograma se puede observar la cantidad de los diferentes rangos de la escala de grises que contiene una imagen. Cuando se desplaza el cursor dentro del histograma moviendolo horizontalmente se ve gráficamente en la imagen de escala de grises en color verde donde se ven concentrados. 
+Por medio del histograma se puede observar la cantidad de los diferentes rangos de la escala de grises que contiene una imagen. Cuando se desplaza el cursor dentro del histograma moviendolo horizontalmente, se observa gráficamente en la imagen de escala de grises en color verde donde se encuentran concentrados estos rangos. 
 
 ![Imagen_histograma](/imagenes/histograma.png)
 
