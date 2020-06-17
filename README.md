@@ -13,6 +13,8 @@ En este taller se desarrollan diferentes formas de procesamiento de imagenes, ta
 
 * Por medio de un histrograma observar la cantidad (porcentaje) de los diferentes valores de grises luego de realizar la conversión de una imagen a escala de grises mediante el método **LUMA** y como estos se ven reflejados en la imagen convertida.  
 
+* Observar la conversión de imagenes por medio de **codigo ASCII** y usando el filtro de escala de grises, y cuanto se conserva de la imagen original.
+
 * Realizar la comparación entre el rendimiento entre la CPU y la GPU al ejecutar los ejercicios solo con **Processing** como con **OpenGL Shading Language**.
 
 <br>
@@ -92,6 +94,12 @@ Por medio del histograma se puede observar la cantidad de los diferentes rangos 
 
 <br>
 
+### Conversion a ASCII  
+
+![Imagen_ascii](/imagenes/imagen_ascii.png)
+
+<br>
+
 ### Matrices de Convolución
 A continuación vemos diferentes ejemplos de aplicar filtros a una imagen mediante las matrices de convolución:  
 
@@ -153,7 +161,7 @@ Para realizar el análisis de el uso de la CPU y la GPU, se uso una computadora 
 * Procesador: Intel Core i7-8790H
 * Mem. RAM: 8GB
 * Tarj. Gráfica: Nvidia 1050 Ti  
-* Tarj. Integrada: IntelGraphics 4000
+* Tarj. Integrada: Intel HUD Graphics 630
 
 El video usado:
 
@@ -181,6 +189,11 @@ Condiciones iniciales del sistema antes de correr el video con las diferentes co
 
 <br>  
 
+Rendimiento del procesador mientras se ejecuta con la imagen y convoluciones:  
+![procesador_video_grises](/imagenes/procesador_imagen_gris_con.png)
+
+<br>  
+
 Ejecutando el video con la conversión a escala de grises (LUMA):  
 ![video_escala_grises](/imagenes/video_grises.png)  
 
@@ -202,27 +215,27 @@ Rendimiento del procesador mientras se ejecuta el video:
 
 <br>
 
-Ejecutando el video con **SHADERS** y conversión escala de grises:  
-![video_convoluciones](/imagenes/convolucionesss.png)  
+Ejecutando **SHADERS** y conversión escala de grises de una imagen:  
+![video_convoluciones](/imagenes/shaders_imagen.png)  
 
 <br>
 
-Rendimiento del procesador mientras se ejecuta el video:  
-![procesador_video_convoluciones](/imagenes/procesador_corriendo_convolucionessss.png)  
+Rendimiento del procesador mientras se ejecuta:  
+![procesador_video_convoluciones](/imagenes/procesador_shaders_imagen.png)  
 
 <br>
 
 Ejecutando el video con **SHADERS** y matrices de convolución:  
-![video_convoluciones](/imagenes/convolucionesss.png)  
+![video_convoluciones](/imagenes/shaders_video.png)  
 
 <br>
 
 Rendimiento del procesador mientras se ejecuta el video:   
-![procesador_video_convoluciones](/imagenes/procesador_corriendo_convolucionessss.png)  
+![procesador_video_convoluciones](/imagenes/procesador_shaders_video.png)  
 
 
 ## Conclusiones
- * conclusion 1
+ * Aunque el consumo de recursos al usar shaders es levemente mayor, realmente no hay una diferencia de rendimiento significativa entre usar o no shaders personalizados.
  * conclusion 2
  * conclusion 3
 
