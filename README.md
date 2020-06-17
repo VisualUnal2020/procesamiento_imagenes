@@ -235,9 +235,13 @@ Rendimiento del procesador mientras se ejecuta el video:
 
 
 ## Conclusiones
- * El uso de matrices de convoluvión en video se realiza más eficientemente con shaders perzonalizados, ya que en el ejecicio que se realiza sin ellos casi toda la carga cae sobre un procesador.
- * Cuando se trata de procesar imagenes de forma individual, ya sea con matrices de convolución o trasformación a blanco y negro, casi no hay diferencia de rendimiento entre usar shaders personalizados o no.
- * conclusion 3
+
+* Se puede ver la diferencia al convertir una imagen a escala de grises cuando se usa promedio RGB y LUMA ya que en LUMA se parecia mejor la conservación del brillo, en otras palabras se puede ser la diferencia entre los colores de la imagen original ya que en el promedio RGB lo que es color rojo y verde parece que fueran el mismo y no ve muy claramente la diferencia en ese caso.  
+
+ * Algunos de los filtros(efectos) al aplicar las convoluciones como *enfoque* y *pulir* se asemejan a los efectos de camaras profesionales usando lentes con el llamado efecto retrato o bokeh, o en su momento a Google con su smartphone PIXEL que aplicaba efectos y mejoras a  las fotos tomadas mediande el uso de software.  
+
+ * Se puede concluir que el uso de *SHADERS* permite un mejor rendimiento de la aplicacion ya que libera al CPU cálculos que son difíciles de hacer, por ejemplo en el CPU_11 se ve que su rendimiento se encuentra aproximadamente entre el 70% y el 100% de uso cuando se esta renderizando el video convertido a escala de grises y convoluciones y un uso de la tarjeta gráfica integrada del 13%, pero cuando se ejecuta con SHADRES se observa el uso de la tarjeta gráfica dedicada (Nvidia) se encuenrta entre el 17% y 20% la intergada baja su rendimiento al 7% y en la CPU sus procesadores el que más consume llega al 30%, por lo cual este cambio de rendimiento demuestra que la implementacion de SHADERS mejora el rendimiento de la CPU al lierarlo de cálculos lentos y que en la tarjeta grafica se realizan de manera mas eficiente con hardware dedicado y en paralelo.
+
 
 ## Referencias 📖  
 
