@@ -236,7 +236,7 @@ Rendimiento del procesador mientras se ejecuta el video:
 
 
 ## Conclusiones
- * conclusion 1
+ * Aunque el consumo de recursos al usar shaders es levemente mayor, realmente no hay una diferencia de rendimiento significativa entre usar o no shaders personalizados.
  * conclusion 2
  * conclusion 3
 
